@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<form id="frm1" onsubmit="myFunction(); return false">
+		Nombre: <input type="text" name="name" id="name" required ><br>
+		Mail: <input type="email" name="email" id="email"required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"><br>
+    <button >Mostrar</button>
+  </form>
+	<p id="mostrarNombre"></p>
+	<p id="mostrarMail"></p>
+	<script>
+		function myFunction() {
+    var nombre=document.getElementById("name").value;
+    var mail=document.getElementById("email").value;
+    document.getElementById("mostrarNombre").innerHTML="Nombre : "+nombre;
+    document.getElementById("mostrarMail").innerHTML="Email: "+mail;
+		}
+	</script>
+</body>
+</html>
